@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Nearer Hospital</title>
+    <link rel="icon" href="emoji.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+         :root {
+            --red: #FF4F5B;
+        }
+        
+        * {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
+        }
+        
+        *::selection {
+            background: var(--red);
+            color: #fff;
+        }
+        
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+        
+        header {
+            width: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 1.5rem 7%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            z-index: 1;
+            text-decoration: none;
+            height: 10.5%;
+        }
+        
+        header a.logo {
+            text-decoration: none;
+        }
+        
+        header a.logo:hover {
+            text-decoration: none;
+            color: #666;
+        }
+        
+        header .logo {
+            font-size: 2.5rem;
+            color: #666;
+        }
+        
+        header .logo span {
+            color: var(--red);
+        }
+        
+        header .navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        header .navbar ul li {
+            margin-left: 2.5rem;
+        }
+        
+        header .navbar ul li a {
+            color: #999;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+        
+        header .navbar ul li a.active,
+        header .navbar ul li a:hover {
+            color: var(--red);
+            border-bottom: .2rem solid var(--red);
+            padding: .7rem 0;
+        }
+        
+        .z {
+            border: 0;
+            margin-top: 1%;
+            margin-left: 17%;
+        }
+        
+        .x {
+            margin-top: 6%;
+            text-align: center;
+            font-family: "Sofia", sans-serif;
+        }
+        
+        #menu {
+            font-size: 3rem;
+            color: #999;
+            cursor: pointer;
+            display: none;
+        }
+        
+        @media(max-width:991px) {
+            html {
+                font-size: 55%;
+            }
+        }
+        
+        @media(max-width:768px) {
+            #menu {
+                display: block;
+            }
+            header .navbar {
+                position: fixed;
+                top: 6.7rem;
+                left: -120%;
+                height: 100%;
+                width: 100%;
+                background: #eee;
+                border-top: .2rem solid rgba(59, 47, 47, 0.1);
+            }
+            header .navbar ul {
+                display: flexbox;
+                flex-flow: column;
+                text-align: center;
+                justify-content: center;
+                margin-left: 40%;
+                margin-top: -40%;
+                margin-right: 10%;
+            }
+            header .navbar ul li {
+                width: 500%;
+                margin: 1rem 0;
+            }
+            header .navbar ul li a {
+                display: block;
+                padding: 1rem;
+            }
+            header .navbar ul li a.active,
+            header .navbar ul li a:hover {
+                padding: 1rem;
+                background-color: var(--red);
+                color: #fff;
+                border: none;
+                border-radius: 5rem;
+            }
+            header .navbar.nav-toggle {
+                left: 0;
+            }
+            .fa-times {
+                transform: rotate(180deg);
+            }
+        }
+        
+        footer {
+            position: fixed;
+            height: auto;
+            width: 100vw;
+            font-family: "Open sans";
+            bottom: 0;
+            color: grey;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .footer-bottom p {
+            font-size: 20px;
+            word-spacing: 2px;
+        }
+        
+        @media(max-width:768px) {
+            .z {
+                width: 75%;
+                height: 400px;
+                margin-top: 5%;
+                margin-left: 13%;
+            }
+            .x {
+                margin-top: 10%;
+            }
+            .footer {
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a class="logo">C<span class="fas fa-virus"></span>VID-19</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="detail.html">Information</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="x ">You can find nearer hospital using map. Also you can view larger map.</h1>
+    <iframe class="z" width="1000" height="500" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=hospital&key=AIzaSyCUbnABlf1ug6Ok8r5e06kVnpLed_kKvLs"></iframe>
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2021 FightAgainstCovid</p>
+        </div>
+    </footer>
+</body>
+
+</html>
